@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html data-dpr="1" style="font-size: 54px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>大家中医跟师抄方</title>
+    <link href="./files/common.css" rel="stylesheet">
+    <link href="./files/courseInfo.css" rel="stylesheet">
+    <link href="./files/article.css" rel="stylesheet">
+    <script src="./files/flexible.min.js"></script>
+    <style>
+
+    html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+    html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+    html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}</style>
+<body style="font-size: 12px;">
+    <!-- <audio preload="auto" controls="controls" src="https://static.dev.dajiazhongyi.com/upload/user/audio/00/00/05/32/53/Dinu+Lipatti-Barcarolle+in+F-Sharp+Major%2C+Op+60+(%E5%8D%87F%E5%A4%A7%E8%B0%83%E8%88%B9%E6%AD%8C%EF%BC%8C%E4%BD%9C%E5%93%8160)_1522120089870.mp3"></audio> -->
+    <div id="wrapper" class="course-home">
+    <div class="audioPlayer" id="audioPlayer-audio-3347172221323116" contenteditable="false" datasrc="https://static.dev.dajiazhongyi.com/upload/user/audio/00/00/05/32/53/Dinu+Lipatti-Barcarolle+in+F-Sharp+Major%2C+Op+60+(%E5%8D%87F%E5%A4%A7%E8%B0%83%E8%88%B9%E6%AD%8C%EF%BC%8C%E4%BD%9C%E5%93%8160)_1522120089870.mp3" datatitle="chopin-32.mp3" data-duration="114.084">
+            <div class="audioWrap" contenteditable="false">
+                <div class="btnWrapper" id="audio-3347172221323116">
+                    <a class="btnAudio play" href="javascript:;"></a>
+                </div>
+                <div class="infoWrapper" contenteditable="false">
+                    <div class="title">chopin-32.mp3</div>
+                    <div class="subinfo"><span class="playedTime" data-time=""></span><span class="time" data-time="">00:01:54</span><span class="size">0.4M</span></div>
+                    <a class="btnDelAudio" id="audioPlayerDel-audio-3347172221323116"></a>
+                </div>
+            </div>
+    </div>
+    <div class="audioPlayer" id="audioPlayer-audio-3347172221323116" contenteditable="false" datasrc="https://static.dev.dajiazhongyi.com/upload/user/audio/00/00/05/32/53/%E8%BF%99%E6%98%AF%E6%AD%8C%E5%90%8D%E8%BF%99%E6%98%AF%E6%AD%8C%E5%90%8D_1522120163713.mp3" data-duration="114.084">
+    
+    <!-- <div class="audioPlayer" id="audioPlayer-audio-3347172221323116" contenteditable="false" datasrc="https://static.dev.dajiazhongyi.com/upload/user/video/00/00/00/00/11/医师讲解_1519873976855.mp3" data-duration="114.084"> -->
+        <div class="audioWrap" contenteditable="false">
+            <div class="btnWrapper" id="audio-3347172221323116">
+                <a class="btnAudio play" href="javascript:;"></a>
+            </div>
+            <div class="infoWrapper" contenteditable="false">
+                <div class="title">这是歌名这是歌名.mp3</div>
+                <div class="subinfo"><span class="playedTime" data-time=""></span><span class="time" data-time="">00:01:54</span><span class="size">0.4M</span></div>
+                <a class="btnDelAudio" id="audioPlayerDel-audio-3347172221323116"></a>
+            </div>
+        </div>
+</div>
+    </div>
+
+<script>
+   
+</script>
+<script>
+    initAudioPlayer()
+       document.addEventListener("WeixinJSBridgeReady", function () { 
+       });
+       function initAudioPlayer(audios) {
+    var audios = document.querySelectorAll('.audioPlayer')
+    if (audios && audios.length) {
+        for (var i = 0; i < audios.length; i++) {
+            var container = audios[i]
+            var touch = container.querySelector('.btnWrapper')
+            var btn = container.querySelector('.btnAudio')
+            var src = container.getAttribute('datasrc') ? container.getAttribute('datasrc') : container.querySelector('audio') && container.querySelector('audio').getAttribute('src')
+            var id = container.id
+            var ap = new AudioPlayerForShare(id, src, container)
+            var startMill = null
+            !(function (ap, btn, container) {
+                ap.audio.onended = function () {
+                    ap.playing = false
+                    btn.className = 'btnAudio play'
+                    container.querySelector('.time').innerHTML = AudioPlayerForShare.formatTime(ap.audio.duration)
+                }
+                btn.onclick = function () {
+                    // if (!ap.canPlay) {
+                    //     return
+                    // }
+                    // if (navigator.userAgent.toLocaleLowerCase().match(/iphone/) && ap.autoPlayed) {
+                    //     ap.audio.removeAttribute('autoplay')
+                    //     ap.audio.volume = 1
+                    //     ap.audio.src = ''
+                    //     ap.audio.src = ap.src
+                    //     if ('load' in ap.audio) {
+                    //         ap.audio.load()
+                    //     }
+                    //     ap.autoPlayed = false
+                    // }
+                    // 播放-> 暂停
+                    if (btn.className.indexOf('pause') >= 0) {
+                        ap.audio.pause()
+                        ap.playing = false
+                        btn.className = 'btnAudio play'
+                    } else { //播放-》暂停
+                        if (/*ap.canPlay && */!ap.playing) {
+                            ap.audio.play()
+                            ap.playing = true
+                            btn.className = 'btnAudio pause'
+                            if ('ontimeupdate' in ap.audio) {
+                                ap.audio.ontimeupdate = function (e) {
+                                    var dur = ap.audio.duration
+                                    var curTime = (e.target.currentTime || e.target.played.end(0)).toFixed(2)
+                                    container.querySelector('.time').innerHTML = AudioPlayerForShare.formatTime(curTime) + '/' + AudioPlayerForShare.formatTime(dur)
+                                }
+                            } else {
+                                var timer = setInterval(function () {
+                                    if (ap.playing) {
+                                        var curTime = ap.audio.currentTime
+                                        var dur = ap.audio.duration
+                                        container.querySelector('.time').innerHTML = AudioPlayerForShare.formatTime(curTime) + '/' + AudioPlayerForShare.formatTime(dur)
+                                    } else {
+                                        clearInterval(timer)
+                                    }
+                                }, 1000)
+                            }
+                        }
+                    }
+                }
+            })(ap, btn, container)
+        }
+    }
+}
+function AudioPlayerForShare(id, src, container) {
+    var _this = this
+    this.id = id
+    this.src = src
+    this.container = container
+    var audio = new Audio()
+    this.audio = audio
+    this.duration = null
+    this.playing = false
+    this.canPlay = false
+    this.autoPlayed = false
+    audio.style.display = 'none'
+    audio.setAttribute('controls', 'controls')
+    // if (navigator.userAgent.toLocaleLowerCase().match(/iphone/)) { // ios：必须设置autoplay属性，才能通过代码触发play()
+    //     this.autoPlayed = true
+    //     audio.setAttribute('autoplay', 'true')
+    //     audio.volume = 0
+    // }
+    audio.onloadedmetadata = function () {
+       if (audio.duration) {
+            _this.duration = audio.duration
+       }
+    }
+    audio.oncanplay = function () { //  部分环境canplay 必须在play()后触发
+        _this.canPlay = true
+    }
+    container.appendChild(audio)
+    audio.src = src
+}
+AudioPlayerForShare.formatTime = function (time) {
+    var res = ''
+    var h,m,s
+    if (!isNaN(time)) {
+        h = _pad(Math.floor(time / 3600))
+        m = _pad(Math.floor((time - h * 3600) / 60))
+        s = _pad(Math.floor((time - h * 3600 - m * 60)))
+        res = h + ':' + m + ':' + s
+    } else {
+        res = '未知长度'
+    }
+    return res
+    function _pad (num) {
+        return num >= 10 ? num + '' : '0' + num
+    }
+}
+
+       alert('5')
+       
+       </script>
+<script src="./files/jquery.min.js"></script>
+<script src="./files/jweixin-1.1.0.js"></script>
+<script>
+
+wx.config({
+    appId:"wxcae6062a9e002db0",
+    jsApiList:["hideMenuItems", "onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareQZone", "hideAllNonBaseMenuItem", "showAllNonBaseMenuItem", "closeWindow", "openAddress"],
+    nonceStr:"pAhBDnAMbtZJQ3pR",
+    signature:"5eb15fe1a94c9a449e4c1a21a094b6fb37ee548a",
+    timestamp:1521793433
+});
+// initAudioPlayer()
+wx.ready(function() {
+    console.log(1,wx)
+});
+</script>
+</body></html>

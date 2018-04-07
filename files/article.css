@@ -1,0 +1,274 @@
+.audioPlayer {
+  margin: 0.5em 0;
+  width: 100%;
+  height: 5.71428571em;
+  background-color: #fcfcfc;
+  border: solid 1px #dddddd;
+  box-sizing: border-box;
+}
+.audioPlayer .audioWrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.audioPlayer .btnWrapper {
+  float: left;
+  position: relative;
+  width: 5.71428571em;
+  height: 100%;
+  background-color: #ebebeb;
+  border-right: solid 1px #ddd;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.audioPlayer .btnWrapper .btnAudio {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2.85714286em;
+  height: 2.85714286em;
+  margin-top: -1.42857143em;
+  margin-left: -1.42857143em;
+}
+.audioPlayer .btnWrapper .btnAudio.play {
+  background: url(./images/audioPlayGray@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.audioPlayer .btnWrapper .btnAudio.pause {
+  background: url(./images/audioPauseGray@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.audioPlayer .infoWrapper {
+  position: relative;
+  margin-left: 5.71428571em;
+  height: 100%;
+  padding: 1.14285714em;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+}
+.audioPlayer .infoWrapper .title {
+  height: 1em;
+  font-size: 1em;
+  line-height: 1.0;
+  text-align: left;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.audioPlayer .infoWrapper .subinfo {
+  margin-top: 1.14285714em;
+  height: 1em;
+  font-size: 1em;
+  line-height: 1.0;
+  color: #999;
+}
+.audioPlayer .infoWrapper .subinfo .size {
+  margin-left: 1.14285714em;
+}
+.audioPlayer .infoWrapper .btnDelAudio {
+  position: absolute;
+  right: 1.14285714em;
+  bottom: 1.14285714em;
+  width: 1.71428571em;
+  height: 1.71428571em;
+  background: url(./images/music@2x.png) center no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
+.audioPlayer audio {
+  display: none;
+}
+.dpr2x .audioPlayer .btnWrapper .btnAudio.play {
+  background: url(./images/audioPlayGray@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr2x .audioPlayer .btnWrapper .btnAudio.pause {
+  background: url(./images/audioPauseGray@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr2x .audioPlayer .btnWrapper:hover .btnAudio.play {
+  background: url(./images/audioPlay@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr2x .audioPlayer .btnWrapper:hover .btnAudio.pause {
+  background: url(./images/audioPause@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr2x .audioPlayer .infoWrapper .btnDelAudio {
+  background: url(./images/music@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr3x .audioPlayer .btnWrapper .btnAudio.play {
+  background: url(./images/audioPlayGray@3x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr3x .audioPlayer .btnWrapper .btnAudio.pause {
+  background: url(./images/audioPauseGray@3x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr3x .audioPlayer .btnWrapper:hover .btnAudio.play {
+  background: url(./images/audioPlay@3x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr3x .audioPlayer .btnWrapper:hover .btnAudio.pause {
+  background: url(./images/audioPause@3x.png) center no-repeat;
+  background-size: 100%;
+}
+.dpr3x .audioPlayer .infoWrapper .btnDelAudio {
+  background: url(./images/music@3x.png) center no-repeat;
+  background-size: 100%;
+}
+.previewArticle {
+  background: #fff;
+  padding: 0em 0;
+  font-family: 'PingFangSC-Regular', 'Microsoft Yahei';
+  overflow: hidden;
+}
+.previewArticle h3,
+.previewArticle p,
+.previewArticle div,
+.previewArticle img,
+.previewArticle blockquote {
+  user-select: none;
+  -webkit-user-select: none;
+}
+.previewArticle h3,
+.previewArticle p,
+.previewArticle blockquote {
+  line-height: 1.5em;
+  word-wrap: break-word;
+  text-align: justify;
+}
+.previewArticle p {
+  line-height: 1.5em;
+  letter-spacing: 0.0125em;
+  color: #666;
+}
+.previewArticle .imgWrap {
+  margin: 1em 0;
+  text-align: center;
+}
+.previewArticle img {
+  display: block;
+  margin: 0 auto;
+}
+.previewArticle h3 {
+  font-family: 'PingFangSC-Medium', 'Microsoft Yahei';
+  margin: 1em 0 0.5em;
+  font-size: 1.0625em;
+  font-weight: bold;
+  line-height: 1.3125em;
+  letter-spacing: 0.0125em;
+  text-align: left;
+  color: #333;
+}
+.previewArticle blockquote {
+  display: block;
+  border-left: 0.25em solid #d0e5f2;
+  padding: 0.21875em 0.5em;
+  margin: 1em 0;
+  line-height: 1.5em;
+  font-size: 0.9375em;
+  background-color: #f1f1f1;
+  overflow: hidden;
+  color: #666;
+}
+.previewArticle blockquote p {
+  line-height: 1.5em;
+}
+.previewArticle blockquote a {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #4a90e2;
+  text-decoration: none;
+}
+.previewArticle .audioPlayer {
+  margin: 1em 0;
+  width: 100%;
+  height: 3.75em;
+  border: 1px solid #efefef;
+  background: #f6f6f6;
+}
+.previewArticle .audioPlayer .btnWrapper {
+  width: 3.75em;
+  height: 100%;
+  background: transparent;
+  border: none;
+}
+.previewArticle .audioPlayer .btnWrapper .btnAudio {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  margin-top: -1.25em;
+  margin-left: -1.25em;
+  background: url(./images/audioPlay2@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.previewArticle .audioPlayer .btnWrapper .btnAudio.pause {
+  background: url(./images/audioPause@2x.png) center no-repeat;
+  background-size: 100%;
+}
+.previewArticle .audioPlayer .infoWrapper {
+  position: relative;
+  margin-left: 3.75em;
+  height: 100%;
+  padding: 0.5625em 0.5625em 0.5625em 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+.previewArticle .audioPlayer .infoWrapper .btnDelAudio {
+  display: none;
+}
+.previewArticle .audioPlayer .infoWrapper .title {
+  height: auto;
+  font-size: 1.0625em;
+  color: #333;
+  line-height: 1.3125em;
+}
+.previewArticle .audioPlayer .infoWrapper .subinfo {
+  margin-top: 0.5em;
+  font-size: 0.875em;
+  line-height: 1.0625em;
+  color: #666;
+}
+.previewArticle .audioPlayer .infoWrapper .subinfo .size {
+  margin-left: 0.625em;
+}
+/**
+* 2倍屏，3倍屏下图片加载方案
+*/
+[data-dpr="2"] .editorPreviewPhone {
+  background: url(./images/iphone@2x.png) center no-repeat !important;
+  background-size: 100% 100% !important;
+  -moz-background-size: 100% 100% !important;
+  -o-background-size: 100% 100% !important;
+  -webkit-background-size: 100% 100% !important;
+}
+[data-dpr="2"] .previewArticle .btnAudio {
+  background: url(./images/audioPlay2@2x.png) center no-repeat !important;
+  background-size: 100% 100% !important;
+}
+[data-dpr="2"] .previewArticle .btnAudio.pause {
+  background: url(./images/audioPause@2x.png) center no-repeat !important;
+  background-size: 100% 100% !important;
+}
+[data-dpr="3"] .editorPreviewPhone {
+  background: url(./images/iphone@3x.png) center no-repeat !important;
+  background-size: 100% 100% !important;
+  -moz-background-size: 100% 100% !important;
+  -o-background-size: 100% 100% !important;
+  -webkit-background-size: 100% 100% !important;
+}
+[data-dpr="3"] .previewArticle .btnAudio {
+  background: url(./images/audioPlay2@3x.png) center no-repeat !important;
+  background-size: 100% 100% !important;
+}
+[data-dpr="3"] .previewArticle .btnAudio.pause {
+  background: url(./images/audioPause@3x.png) center no-repeat !important;
+  background-size: 100% 100% !important;
+}

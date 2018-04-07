@@ -1,0 +1,381 @@
+html,body{
+    height: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+#wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+a:active,a:link,a:hover{
+    text-decoration: none !important;
+}
+/*
+* 课程老师详情
+*/
+.btnTheme1{
+    display: block;
+    float: right;
+    margin: 8px 12px 0 0;
+    width: 64px;
+    height: 28px;
+    line-height: 28px;
+    color: #b66246;
+    font-size: 12px;
+    font-family: 'PingFangSC-Regular', 'Microsoft Yahei';
+    border: 1px solid #b66246;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+.top-toolbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 44px;
+    background: #fff url(/static/images/teacher/bg_paint@2x.png) center no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+.top-toolbar .icon_dj{
+    display: block;
+    position: absolute;
+    left:16px;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+    background:url(/static/images/teacher/logo_dajia@2x.png) 7px 4px no-repeat;
+    background-size: 26px 31px;
+}
+.toast-mask{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.32);
+    z-index: 1000;
+}
+.toast-share{
+    position: absolute;
+    top: 129.5px;
+    left: 47.5px;
+    right: 47.5px;
+    height: 280px;
+    border-radius: 4px;
+    background: #efeeed;
+    text-align: center;
+}
+.toast-share-title{
+    margin: 24px 0 0;
+    font-family: 'PingFangSC-Medium', 'Microsoft Yahei';
+    letter-spacing: 0.2px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1a1a1a;
+}
+.toast-share-info{
+    margin: 8px 28px 0;
+    font-family: 'PingFangSC-Regular', 'Microsoft Yahei';
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    line-height: 17px;
+    color:#757575;
+}
+.toast-share-icon{
+    margin: 30px auto 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 72px;
+    background:grey;
+}
+.toast-share-name{
+    margin-top: 16px;
+    font-family: 'PingFangSC-Medium', 'Microsoft Yahei';
+    letter-spacing: 0.2px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1a1a1a;
+}
+.toast-share-info2{
+    margin: 10px 28px 0;
+    font-family: 'PingFangSC-Regular', 'Microsoft Yahei';
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    line-height: 17px;
+    color:#757575;
+}
+.toast-share-arrow{
+    position: absolute;
+    width: 51px;
+    height: 143.5px;
+    right: 27px;
+    top: 11px;
+    background:url(/static/images/teacher/arrow_toast@2x.png) center no-repeat;
+    background-size: 100%;
+}
+.toast-share .bamboo-1{
+    position: absolute;
+    width: 66px;
+    height: 138px;
+    left:0;
+    bottom: 42px;
+    background: url(/static/images/teacher/bamboo@2x.png) center no-repeat;
+    background-size: 100%;
+}
+.toast-share .bamboo-2{
+    position: absolute;
+    width: 80px;
+    height: 87px;
+    right:0;
+    bottom: 38px;
+    background: url(/static/images/teacher/bamboo2@2x.png) center no-repeat;
+    background-size: 100% 100%;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background: rgba(0,0,0,0.6);
+}
+.message-img img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+[data-dpr="2"] .top-toolbar{
+    background: url(/static/images/teacher/bg_paint@2x.png) center no-repeat !important;
+    background-size: 100% 100% !important;
+}
+[data-dpr="2"] .top-toolbar .icon_dj{
+    background:url(/static/images/teacher/logo_dajia@2x.png) center no-repeat !important;
+    background-size: 26px 31px !important;
+}
+[data-dpr="3"] .top-toolbar{
+    background: url(/static/images/teacher/bg_paint@3x.png) center no-repeat !important;
+    background-size: 100% 100% !important;
+}
+[data-dpr="3"] .top-toolbar .icon_dj{
+    background:url(/static/images/teacher/logo_dajia@3x.png) center no-repeat !important;
+    background-size: 26px 31px !important;
+}
+[data-dpr="2"] .bamboo-1{
+    background: url(/static/images/teacher/bamboo@2x.png) center no-repeat !important;
+    background-size: 100% 100% !important;
+}
+[data-dpr="3"] .bamboo-1{
+    background: url(/static/images/teacher/bamboo@3x.png) center no-repeat !important;
+    background-size: 100% 100% !important;
+}
+[data-dpr="2"] .bamboo-2{
+    background: url(/static/images/teacher/bamboo2@2x.png) center no-repeat !important;
+    background-size: 100% 100% !important;
+}
+[data-dpr="3"] .bamboo-2{
+    background: url(/static/images/teacher/bamboo2@3x.png) center no-repeat !important;
+    background-size: 100% 100% !important;
+}
+[data-dpr="2"] .toast-share-arrow{
+    background:url(/static/images/teacher/arrow_toast@2x.png) center no-repeat !important;
+    background-size: 100% 100% !important;
+}
+[data-dpr="3"] .toast-share-arrow{
+    background:url(/static/images/teacher/arrow_toast@3x.png) center no-repeat !important;
+    background-size: 100% 100% !important;
+}
+
+
+
+/*
+* ------------------------------------------------------------------------
+*                              带头尾及浮层分享页
+* ------------------------------------------------------------------------
+*/
+
+.navbar-header {
+    background-color: #eceae8;
+    border-color: #eceae8;
+    border-radius: 0;
+    height: 70px;
+    line-height: 70px;
+    width: 100%;
+}
+.dajia-logo img{
+    height: 47px;
+    vertical-align: middle;
+}
+.dajia-logo2 img {
+    height: 35px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.dj-header-logo {
+    margin-left:15px;
+}
+.app-action {
+    margin-right:15px;
+}
+.pull-right{
+    float: right;
+}
+
+@media screen and (max-width:350px) {
+    .dj-header-logo {
+        margin-left:5px;
+    }
+    .app-action {
+        margin-right:5px;
+    }
+}
+
+.btn-hollow {
+    background: none;
+    border:1px solid #c15d3e;
+    border-radius:4px;
+    color:#c15d3e;
+    font-size: 14px;
+    padding:5px 10px;
+    cursor: pointer;
+}
+.btn-solid {
+    background:#c15d3e;
+    border:1px solid #c15d3e;
+    border-radius:4px;
+    color:#fff;
+    font-size: 14px;
+    padding:5px 10px;
+    cursor: pointer;
+}
+.btn-open-app {
+    margin-left:7px;
+}
+#open_from_safari {
+    text-align: center;
+    padding-top:10px;
+}
+.message-img img {
+    width: 350px;
+}
+.dajia-app-recommend {
+    padding-top: 15px;
+}
+
+.dajia-app-recommend .app-rec-icon {
+    padding-right: 20px;
+}
+.dajia-app-recommend .app-rec-icon img {
+    border-radius: 10px;
+}
+
+.dajia-app-recommend .app-rec-desc {
+    line-height: 1;
+    font-size: 12px;
+    padding-top: 6px;
+}
+
+.dajia-app-recommend .app-rec-desc h5 {
+    font-size: 16px;
+    color: #444;
+}
+
+.dajia-app-recommend .app-rec-desc p {
+    color: #999;
+}
+
+.dajia-app-recommend .app-rec-desc a {
+    color: #c15d3e;
+}
+
+.app-promotion-bar {
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    /*display: none;*/
+    width: 100%;
+    height: 60px;
+    background-color: #463e3b;
+}
+
+.app-promotion-bar .close {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    padding: 20px;
+    background-image: url('../img/app-promotion-bar-close.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: block;
+}
+
+.app-promotion-bar .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 46px;
+    width: 42px;
+    height: 42px;
+    margin: auto;
+    background-image: url('../img/common/logo.png');
+    background-position: center center;
+    background-size: 41px;
+    border-radius: 10px;
+}
+
+.app-promotion-bar .title {
+    text-indent: -2000px;
+    width: 80px;
+    height: 20px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 19px;
+    color: #9596ab;
+    background: url('../img/common/nav-logo.png') 0 0 no-repeat;
+}
+
+.app-promotion-bar .describe {
+    margin-top: 3px;
+    margin-left: 99px !important;
+    font-size: 12px;
+    color: #a7a4a3;
+}
+
+.app-promotion-bar .title, .app-promotion-bar .describe {
+    margin-left: 97px;
+    margin-right: 84px;
+    line-height: 1;
+}
+
+.app-promotion-bar .download-btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    /*width: 80px;*/
+    height: 30px;
+    padding: 9px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    background-color: #c15d3e;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
