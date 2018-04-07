@@ -2,7 +2,7 @@
 <html data-dpr="1" style="font-size: 54px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>大家中医跟师抄方</title>
+    <title>performance api  </title>
     <link href="./files/common.css" rel="stylesheet">
     <link href="./files/courseInfo.css" rel="stylesheet">
     <link href="./files/article.css" rel="stylesheet">
@@ -209,7 +209,7 @@ AudioPlayerForShare.formatTime = function (time) {
 
 <script src="./files/jquery.min.js"></script>
 </body></html>
-<script>
+<script> 
     window.onerror= function (e) {
         console.log(e)
         return true
@@ -224,8 +224,19 @@ AudioPlayerForShare.formatTime = function (time) {
 </script>
 <script>
     var t1 = new Date().getTime()  // dom结构完成
-    // 1. throw new Error('fuck')
-    // 2.
+    /**
+    * 使用window.onerror 进行全局异常处理 
+    * promise 中的异常不捕获（直接进入reject分支）
+    */
+    // throw new Error('fuck')
+    /*
+    *  2. promise error
+    */
+    // var p = new Promise(function (res, rej) {
+    //         throw new Error()
+    // }).catch(function () {
+    //     alert('promise failed')
+    // })
     setTimeout(function () {
             console.log('final strpt start:'+t1,'final strpt end:'+t2, 'performance dom contentloadetstart:' + performance.timing.domContentLoadedEventStart, 'performance dom contentloadend:' + performance.timing.domContentLoadedEventEnd)
     }, 1000)
